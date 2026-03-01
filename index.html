@@ -6,6 +6,11 @@
     <title>Puma</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+        function videoFunction(){
+            document.getElementById("my comment").innerHTML += "A great vaction video.";
+        }
+    </script>
 </head>
 <body>
     <div class="container">
@@ -13,7 +18,7 @@
             <h1>Our Vacation website</h1>
         </header>
 
-        <section>
+        <main>
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="a">PumaNav</a>
@@ -30,7 +35,7 @@
                     </div>
                  </div>
             </nav>
-            <video width="320" height="248" controls>
+            <video width="320" height="248" controls  onloadstart="videoFunction()">
                 <source src="myMovie.mp4" type="video/mp4">
                 [Your browser does not support the video element]
             </video>
@@ -39,7 +44,9 @@
                 <source src="mySound.mp3" type="audio/mpeg">
                 [Your browser does not support the audio element]
             </audio>
-        </section>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/mTM7F-5999Q?si=jkHZM3w8Wio0QyKl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p id="my comment">My Youtube Video: </p>
+        </main>
 
         <footer>
             <p>Copyright &copy;, 2026 Christian Durham</p>
